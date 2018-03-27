@@ -1,0 +1,4 @@
+
+Run:
+export HADOOP_CLASSPATH=myhadoop.jar
+hadoop MaxTemperatureApp input/ncdc/sample.txt output
