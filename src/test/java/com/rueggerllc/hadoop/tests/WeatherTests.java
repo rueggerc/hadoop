@@ -8,6 +8,8 @@ import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import com.rueggerllc.hadoop.utils.WeatherDataReader;
+
 public class WeatherTests {
 
 	private static Logger logger = Logger.getLogger(WeatherTests.class);
@@ -32,6 +34,12 @@ public class WeatherTests {
 	@Ignore
 	public void dummyTest() {
 		logger.info("Dummy Test");
+	}
+	
+	@Test
+	public void testReadWeatherData() {
+		WeatherDataReader weatherDataReader = new WeatherDataReader();
+		weatherDataReader.execute("/1901.txt");
 	}
 	
 
