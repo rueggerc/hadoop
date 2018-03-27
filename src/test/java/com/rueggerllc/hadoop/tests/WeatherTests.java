@@ -40,6 +40,7 @@ public class WeatherTests {
 	public void testReadWeatherData() {
 		WeatherDataReader weatherDataReader = new WeatherDataReader();
 		weatherDataReader.execute("/1901.txt");
+		weatherDataReader.execute("/1902.txt");
 	}
 	
 
