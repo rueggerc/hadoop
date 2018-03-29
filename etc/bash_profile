@@ -1,0 +1,37 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+export HADOOP_HOME=/opt/hadoop-2.7.4
+export HADOOP_PREFIX=$HADOOP_HOME
+export HADOOP_INSTALL=$HADOOP_HOME
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export HADOOP_YARN_HOME=$HADOOP_HOME
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+export HADOOP_LIBEXEC_DIR=$HADOOP_HOME/libexec
+export HADOOP_CONF_DIR=$HADOOP_PREFIX/etc/hadoop
+export SPARK_HOME=/opt/spark-2.2.1-bin-hadoop2.7
+export KAFKA_HOME=export KAFKA_HOME=/opt/kafka_2.11-1.0.0
+
+export GRADLE_HOME=/opt/gradle/gradle-3.4.1
+export M2_HOME=/usr/local/apache-maven-3.5.2
+
+export DERBY_HOME=/opt/db-derby-10.14.1.0-bin
+export DERBY_OPTS=-Dderby.system.home=/home/hadoop/DerbyDB
+
+#export NIFI_HOME=/opt/nifi-1.4.0
+export NIFI_HOME=/opt/nifi-1.5.0
+export FLINK_HOME=/opt/flink-1.4.0
+export HBASE_HOME=/opt/hbase-1.2.6
+export HIVE_HOME=/opt/apache-hive-2.3.2-bin
+
+
+# User specific environment and startup programs
+PATH=$PATH:$GRADLE_HOME/bin:$M2_HOME/bin:$HADOOP_HOME/sbin:$HADOOP_HOME/bin:$SPARK_HOME/sbin:$SPARK_HOME/bin:$HBASE_HOME/bin:$HIVE_HOME/bin:$DERBY_HOME:/bin:$HOME/.local/bin:$HOME/bin
+export PATH
